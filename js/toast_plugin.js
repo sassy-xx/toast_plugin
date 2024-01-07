@@ -38,10 +38,6 @@ const toast_plugin = {
         if (!existing_container) {
             const toast_container = document.createElement('div');
             toast_container.id = 'toast_container';
-            toast_container.style.position = 'fixed';
-            toast_container.style.width = '20vw';
-            toast_container.style.bottom = '0px';
-            toast_container.style.right = '1rem';
             document.body.appendChild(toast_container);
         }
     },
@@ -92,7 +88,7 @@ const toast_plugin = {
     }) {
         const toast_node = document.createElement('div');
         toast_node.innerHTML = `
-            <div class="container-fluid toast_instance ${background_color} ${text_color} ${border_color} m-0 p-0 g-0" id="toast_${queue_number}">
+            <div class="container-fluid toast_instance ${background_color} ${text_color} ${border_color} m-0 p-0 g-0 mt-1 mb-1" id="toast_${queue_number}">
                 <div class="row justify-content-center align-items-center g-0">
                     <div class="col-12">
                         <h6 class="${border_color} border-top-0 border-end-0 border-start-0 p-2">${title}</h6>
@@ -145,7 +141,7 @@ const toast_plugin = {
 };
 
 // Example usage:
-toast_plugin.render_toast('error', 'Username Empty', 'Please provide a valid username / Email address!', 5000);
+// toast_plugin.render_toast('error', 'Username Empty', 'Please provide a valid username / Email address!', 5000);
 
 
 // Example usage:

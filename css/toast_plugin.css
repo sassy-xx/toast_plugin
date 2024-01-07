@@ -1,7 +1,7 @@
 #toast_container {
     position: fixed;
     width: 20vw;
-    bottom: 0px;
+    bottom: 1rem;
     right: 1rem;
 }
 
